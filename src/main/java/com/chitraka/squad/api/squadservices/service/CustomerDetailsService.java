@@ -9,8 +9,6 @@ import com.chitraka.squad.api.squadservices.model.CustomerDetailsDTO;
 
 public interface CustomerDetailsService {
 	
-	public void sendmail() throws AddressException, MessagingException, IOException;
-	
-	public String saveUserDetails(CustomerDetailsDTO userDetailsDTO);
+	public String sendEmailandSaveCustDetails(CustomerDetailsDTO custDetailsDTO) throws AddressException, MessagingException, IOException;
 
 }
