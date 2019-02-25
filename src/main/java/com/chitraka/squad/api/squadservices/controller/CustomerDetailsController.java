@@ -28,7 +28,6 @@ public class CustomerDetailsController {
 	 public String sendEmailandUserDetails(@RequestBody CustomerDetailsDTO customerDetailsDTO) throws AddressException, MessagingException, IOException  {
 		 String message = custDetailsService.sendEmailandSaveCustDetails(customerDetailsDTO);
 		 return message;
-		 
 	 }
 
 }

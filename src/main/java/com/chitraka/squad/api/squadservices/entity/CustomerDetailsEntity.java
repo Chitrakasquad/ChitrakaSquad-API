@@ -13,10 +13,6 @@ import javax.persistence.Table;
 @Table (name = "cust_details")
 public class CustomerDetailsEntity {
 	
-
-	//@Column(name = "custid")
-	/*@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="customerseq")
-	@SequenceGenerator(name="customerseq", sequenceName="customerseq", allocationSize = 1)*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
