@@ -2,6 +2,7 @@ package com.chitraka.squad.api.squadservices.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,8 +28,8 @@ public class AboutController {
 	}
     
     @PutMapping(path = "/updatetext/{id}")
-    public String updateText(@RequestBody AboutDTO aboutDTO) {
-    	String text = aboutTextServiceImpl.updateText(aboutDTO);
+    public String updateText(@PathVariable("id") Long id, @RequestBody AboutDTO aboutDTO) {
+    	String text = aboutTextServiceImpl.updateText(aboutDTO,id);
     	return text;
     }
 	 

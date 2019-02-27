@@ -37,10 +37,10 @@ public class AboutTextServiceImpl {
 		return ApplicationConstants.SUCCESS;
 	}
 	
-	public String updateText(AboutDTO aboutDTO) {
+	public String updateText(AboutDTO aboutDTO, Long id) {
 		try {
 			AboutEntity entity = new AboutEntity();
-			entity.setId(1L);
+			entity.setId(id);
 			entity.setGroupid(1L);
 			entity.setMessage(aboutDTO.getMessage());
 			entity.setCreatedate(new Date());
